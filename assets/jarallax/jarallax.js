@@ -4,86 +4,9 @@
  * Author  : _nK http://nkdev.info
  * GitHub  : https://github.com/nk-o/jarallax
  */
-(function(factory) {
-    'use strict';
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery'], factory);
-    } else if (typeof exports !== 'undefined') {
-        module.exports = factory(require('jquery'));
-    } else {
-        factory(jQuery);
-    }
-}(function($) {
-    // Adapted from https://gist.github.com/paulirish/1579671
-    if (!Date.now)
-        Date.now = function() { return new Date().getTime(); };
-    if(!window.requestAnimationFrame)
-        (function() {
-            'use strict';
-            
-            var vendors = ['webkit', 'moz'];
-            for (var i = 0; i < vendors.length && !window.requestAnimationFrame; ++i) {
-                var vp = vendors[i];
-                window.requestAnimationFrame = window[vp+'RequestAnimationFrame'];
-                window.cancelAnimationFrame = (window[vp+'CancelAnimationFrame']
-                                           || window[vp+'CancelRequestAnimationFrame']);
-            }
-            if (/iP(ad|hone|od).*OS 6/.test(window.navigator.userAgent) // iOS6 is buggy
-                || !window.requestAnimationFrame || !window.cancelAnimationFrame) {
-                var lastTime = 0;
-                window.requestAnimationFrame = function(callback) {
-                    var now = Date.now();
-                    var nextTime = Math.max(lastTime + 16, now);
-                    return setTimeout(function() { callback(lastTime = nextTime); },
-                                      nextTime - now);
-                };
-                window.cancelAnimationFrame = clearTimeout;
-            }
-        }());
-
-    var supportTransform = (function() {
-        var prefixes = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' ');
-        var div = document.createElement('div');
-        for(var i = 0; i < prefixes.length; i++) {
-            if(div && div.style[prefixes[i]] !== undefined) {
-                return prefixes[i];
-            }
-        }
-        return false;
-    }());
-
-    var support3dtransform = (function() {
-        if (!window.getComputedStyle) {
-            return false;
-        }
-
-        var el = document.createElement('p'), 
-            has3d,
-            transforms = {
-                'webkitTransform':'-webkit-transform',
-                'OTransform':'-o-transform',
-                'msTransform':'-ms-transform',
-                'MozTransform':'-moz-transform',
-                'transform':'transform'
-            };
-
-        // Add it to the body to get the computed style.
-        (document.body || document.documentElement).insertBefore(el, null);
-
-        for (var t in transforms) {
-            if (el.style[t] !== undefined) {
-                el.style[t] = "translate3d(1px,1px,1px)";
-                has3d = window.getComputedStyle(el).getPropertyValue(transforms[t]);
-            }
-        }
-
-        (document.body || document.documentElement).removeChild(el);
-
-        return (has3d !== undefined && has3d.length > 0 && has3d !== "none");
-    }());
+(function($) {
     
     var isAndroid = navigator.userAgent.toLowerCase().indexOf('android') > -1;
-    var isOperaOld = !!window.opera;
 
     // list with all jarallax instances
     // need to render all in one scroll/resize event
@@ -123,7 +46,7 @@
                 height     : _this.options.imgHeight || null,
                 // fix for Android devices
                 // use <img> instead background image - more smoothly
-                useImgTag  : isAndroid || isOperaOld
+                useImgTag  : isAndroid
             }
 
             if(_this.initImg()) {
@@ -176,7 +99,7 @@
             .prependTo(_this.$item);
 
         // use img tag
-        if(_this.image.useImgTag && supportTransform) {
+        if(_this.image.useImgTag) {
             _this.image.$item = $('<img>').attr('src', _this.image.src);
             imageStyles = $.extend({
                 'max-width' : 'none'
@@ -330,7 +253,7 @@
         }
         
         // for img tag
-        if(_this.image.useImgTag && supportTransform) {
+        if(_this.image.useImgTag) {
             css.width = _this.round(resultWidth);
             css.height = _this.round(resultHeight);
             css.marginLeft = _this.round(- (resultWidth - contW) / 2);
@@ -379,11 +302,9 @@
             positionY = _this.round(positionY);
             positionX = _this.round(positionX);
 
-        if(supportTransform && _this.options.enableTransform) {
+        if(_this.options.enableTransform) {
             css.transform = 'translateY(' + positionY + 'px) translateX(' + positionX + 'px)';
-            if(support3dtransform) {
-                css.transform = 'translate3d(' + positionX + 'px, ' + positionY + 'px, 0)';
-            }
+            css.transform = 'translate3d(' + positionX + 'px, ' + positionY + 'px, 0)';
         } else {
             css.backgroundPosition = positionX + 'px ' + positionY + 'px';
         }
@@ -454,4 +375,4 @@
     $(document).on('ready.data-jarallax', function () {
         $('[data-jarallax]').jarallax();
     });
-}));
+})(jQuery);

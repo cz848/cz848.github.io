@@ -31,13 +31,13 @@
                 timeout = setTimeout(delayed, threshold || 100);
             };
         }
-        // smartresize 
+        // smartresize
         jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
     })(jQuery,'smartresize');
 
     (function(){
-        
+
         var scrollbarWidth = 0, originalMargin, touchHandler = function(event){
             event.preventDefault();
         };
@@ -49,7 +49,7 @@
                 top : '-9999px',
                 width  : '50px',
                 height : '50px',
-                overflow : 'scroll', 
+                overflow : 'scroll',
                 position : 'absolute'
             }, function(property, value){
                 scrollDiv.style[property] = value;
@@ -166,7 +166,7 @@
 
 
         // .mbr-parallax-background
-        if ($.fn.jarallax && !$.isMobile()){
+        if ($.fn.jarallax){
             $(document).on('destroy.parallax', function(event){
                 $(event.target).outerFind('.mbr-parallax-background')
                     .jarallax('destroy')
@@ -268,7 +268,7 @@
                 $(window).smartresize(function(){
                    var center = map.getCenter();
                    google.maps.event.trigger(map, 'resize');
-                   map.setCenter(center); 
+                   map.setCenter(center);
                 });
                 map.Geocoder = new google.maps.Geocoder;
                 map.Markers = [];
@@ -390,7 +390,7 @@
 
                     if ($(target).parents().hasClass('mbr-gallery')) {
                         if ($(target).parents().hasClass('carousel') || $(target).parent().is('a')) {
-                            return;                            
+                            return;
                         }
                     }
                     do {
@@ -398,9 +398,9 @@
                             var useBody = /#bottom|#top/g.test(target.hash);
                             $(useBody ? 'body' : target.hash).each(function(){
                                 e.preventDefault();
-                                // in css sticky navbar has height 64px 
+                                // in css sticky navbar has height 64px
                                 var stickyMenuHeight = $('.mbr-navbar--sticky').length ? 64 : 0;
-                                var goTo = target.hash == '#bottom' 
+                                var goTo = target.hash == '#bottom'
                                         ? ($(this).height() - $(window).height())
                                         : ($(this).offset().top - stickyMenuHeight);
                                 $('html, body').stop().animate({
