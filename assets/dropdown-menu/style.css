@@ -338,7 +338,7 @@
   bottom: 0;
   left: 0;
   overflow-y: scroll;
-  background-color: rgba(127, 127, 127, .75);
+  background-color: rgba(127, 127, 127, .9);
   transition: none;
 }
 
