@@ -1,5 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
 
 
 @isPublish: true;
@@ -427,6 +428,14 @@ H1 {
 #features1-x {
 }
 
+#header3-15 {
+H3 {
+  text-align: center;
+  font-family: 'Slabo 27px', serif;
+  font-size: 14px;
+}
+}
+
 #gallery1-v {
 }
 
@@ -525,13 +534,13 @@ padding-bottom: (@paddingBottom * 15px);
 .nav .link, .dropdown-item {
   font-size: 1.2em;
   color: #ffffff;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .navbar, .dropdown-menu {
-  background: #4d4d4d;
+  background: #efefef;
 }
 .dropdown-menu .dropdown-toggle[aria-expanded="true"], .dropdown-menu a:hover, .dropdown-menu a:focus {
-  background: #434343;
+  background: #e5e5e5;
 }
 .navbar-toggler {
   color: #ffffff;
