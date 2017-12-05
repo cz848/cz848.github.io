@@ -332,13 +332,14 @@
 }
 
 .navbar-dropdown-open .navbar-dropdown.opened {
-  bottom: 0;
-  left: 0;
-  overflow-y: scroll;
   position: fixed;
   right: 0;
   top: 0;
-  transition: none
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  background-color: rgba(127, 127, 127, .75);
+  transition: none;
 }
 
 .navbar-dropdown {
@@ -685,7 +686,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
   margin-bottom: 0;
-  min-height: 0
+  min-height: 0;
 }
 
 .navbar-dropdown.navbar-short {
