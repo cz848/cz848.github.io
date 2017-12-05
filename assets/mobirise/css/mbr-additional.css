@@ -546,3 +546,117 @@ padding-bottom: (@paddingBottom * 15px);
   color: #ffffff;
 }
 }
+
+
+@isPublish: true;
+
+#footer1-16 {
+padding-top: (@paddingTop * 15px);
+padding-bottom: (@paddingBottom * 15px);
+& when (@bg-type = 'image') {
+  background-image: url(../../../@bg-value);
+}
+& when (@bg-type = 'color') {
+  background-color: @bg-value;
+}
+.content {
+  @media (max-width: 767px) {
+    text-align: center;
+    > div:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+.media-wrap {
+  @media (max-width: 767px) {
+    margin-bottom: 1rem;
+  }
+  .mbr-iconfont-logo {
+    font-size: 7.5rem;
+    color: #f36;
+  }
+  img {
+    height: 6rem;
+  }
+}
+.footer-lower {
+  .copyright {
+    @media (max-width: 767px) {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  }
+  hr {
+    margin: 1rem 0;
+    border-color: #fff;
+    opacity: .05;
+  }
+  .social-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    .mbr-iconfont-social {
+      font-size: 1.3rem;
+      color: #fff;
+    }
+    .soc-item {
+      margin: 0 .5rem;
+    }
+    a {
+      margin: 0;
+      opacity: .5;
+      -webkit-transition: .2s linear;
+      transition: .2s linear;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    @media (max-width: 767px) {
+      justify-content: center;
+      -webkit-justify-content: center;
+    }
+  }
+}
+}
+
+#header4-19 {
+}
+
+#header3-1a {
+}
+
+#map1-1c {
+}
+
+#form1-1b {
+}
+
+#contacts1-17 {
+}
+
+#dropdown-menu-2btn-18 {
+.hide-buttons [data-button] {
+  display: none !important;
+}
+.navbar-brand a {
+  font-family: 'Montserrat', sans-serif;
+}
+.nav .link, .dropdown-item {
+  font-size: 1.2em;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+.navbar, .dropdown-menu {
+  background: #efefef;
+}
+.dropdown-menu .dropdown-toggle[aria-expanded="true"], .dropdown-menu a:hover, .dropdown-menu a:focus {
+  background: #e5e5e5;
+}
+.navbar-toggler {
+  color: #ffffff;
+}
+}
