@@ -354,10 +354,6 @@
     margin-left: 4px;
 }
 
-.switcher .switch input:checked + label::before {
-    background-color: #6C3459;
-}
-
 .switcher .switch.active > label {
     opacity: 1;
 }
