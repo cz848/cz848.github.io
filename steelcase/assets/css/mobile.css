@@ -2021,7 +2021,7 @@ form .row > textarea.columns,
 }
 
 .switch input:checked + label::before {
-    left: 15px;
+    left: 14px;
 }
 
 .switch label {
@@ -2049,7 +2049,7 @@ form .row > textarea.columns,
 }
 
 .switch.large input:checked + label::before {
-    left: 40px;
+    left: 39px;
 }
 
 .switch.small label {
@@ -2063,7 +2063,7 @@ form .row > textarea.columns,
 }
 
 .switch.small input:checked + label::before {
-    left: 28px;
+    left: 27px;
 }
 
 .switch.tiny label {
@@ -2077,7 +2077,7 @@ form .row > textarea.columns,
 }
 
 .switch.tiny input:checked + label::before {
-    left: 24px;
+    left: 23px;
 }
 
 .switch.radius label {

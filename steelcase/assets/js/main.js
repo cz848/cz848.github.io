@@ -1,11 +1,6 @@
 //Open the Mobile Front-end Codebase JS
 $(document).mobile();
 
-// if ((/MicroMessenger/i).test(window.navigator.userAgent)) {
-//     document.querySelector('[data-topbar]').style.display = 'none';
-// }
-
-
 (function() {
 
   var nrColors = 6;
@@ -20,9 +15,9 @@ $(document).mobile();
   $('.arrow').click(changeColor);
   $('#angleSlider').on('input', changeAngle);
 
-  var margin = ($(window).width() / 2) - 100;
-  $('.color section').css('left', margin + 'px');
-  $('#shadow').css('left', margin - 74 + 'px');
+  // var margin = ((window.innerWidth - 189) / 2);
+  // $('.color section').css('left', margin + 'px');
+  // $('#shadow').css('left', margin - 74 + 'px');
 
 
   /**

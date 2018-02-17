@@ -63,17 +63,17 @@
 
 .color section {
     position: absolute;
-    top: 130px;
-    left: 87px;
-    width: 190px;
+    top: 125px;
+    left: 93px;
+    width: 189px;
 }
 
 .color .chair {
     position: absolute;
     top: 0;
     left: 0;
-    width: 190px;
-    height: 279.10188px;
+    width: 189px;
+    height: 277.632922px;
     background-repeat: no-repeat;
     background-size: 800% 100%;
     opacity: 0;
@@ -95,13 +95,13 @@
 }
 
 /* Color Definitions */
-.frame {
+.black {
     background: transparent;
-    display: none;
+    z-index: 2;
 }
 
-.frame .chair {
-    background-image: url(../img/chair/Frame.png);
+.black .chair {
+    background-image: url(../img/chair/black.png);
 }
 
 .green {
@@ -109,7 +109,7 @@
 }
 
 .green .chair {
-    background-image: url(../img/chair/Green.png);
+    background-image: url(../img/chair/green.png);
 }
 
 .orange {
@@ -117,7 +117,7 @@
 }
 
 .orange .chair {
-    background-image: url(../img/chair/Orange.png);
+    background-image: url(../img/chair/orange.png);
 }
 
 .purple {
@@ -125,7 +125,7 @@
 }
 
 .purple .chair {
-    background-image: url(../img/chair/Purple.png);
+    background-image: url(../img/chair/purple.png);
 }
 
 .red {
@@ -133,7 +133,7 @@
 }
 
 .red .chair {
-    background-image: url(../img/chair/Red.png);
+    background-image: url(../img/chair/red.png);
 }
 
 .teal {
@@ -141,7 +141,7 @@
 }
 
 .teal .chair {
-    background-image: url(../img/chair/Teal.png);
+    background-image: url(../img/chair/teal.png);
 }
 
 .yellow {
@@ -149,7 +149,7 @@
 }
 
 .yellow .chair {
-    background-image: url(../img/chair/Yellow.png);
+    background-image: url(../img/chair/yellow.png);
 }
 
 /* Angle Definitions */
@@ -158,36 +158,36 @@
 }
 
 .angle2 {
-    background-position: -190px 0 !important;
+    background-position: -189px 0 !important;
 }
 
 .angle3 {
-    background-position: -380px 0 !important;
+    background-position: -378px 0 !important;
 }
 
 .angle4 {
-    background-position: -570px 0 !important;
+    background-position: -567px 0 !important;
 }
 
 .angle5 {
-    background-position: -760px 0 !important;
+    background-position: -756px 0 !important;
 }
 
 .angle6 {
-    background-position: -950px 0 !important;
+    background-position: -945px 0 !important;
 }
 
 .angle7 {
-    background-position: -1140px 0 !important;
+    background-position: -1134px 0 !important;
 }
 
 /* Chair Shadow Definition */
 .shadow {
     position: absolute;
-    top: 298px;
-    left: 9px;
-    width: 265.05px;
-    height: 113.05px;
+    top: 292px;
+    left: 19px;
+    width: 263.655px;
+    height: 112.455px;
     background-image: url(../img/shadow.png);
     background-size: contain;
 }
@@ -203,6 +203,15 @@
     margin-left: -40%;
 }
 
+.controls {
+    position: absolute;
+    bottom: 90px;
+    width: 274px;
+    height: 50px;
+    left: 50%;
+    margin-left: -137px;
+}
+
 .icon-arrow-back {
     left: 30px;
 }
@@ -214,7 +223,7 @@
 .arrow {
     position: absolute;
     top: 50%;
-    z-index: 2;
+    z-index: 10;
     margin-top: -20px;
     padding: 0;
     width: 40px;
