@@ -102,6 +102,18 @@
                     <li><a>选配功能</a></li>
                   </ul>
                 </header>
+                <div id="chrome" class="color chrome">
+                  <section>
+                    <div class="chair show angle1"></div>
+                    <div class="chair angle2"></div>
+                    <div class="chair angle3"></div>
+                    <div class="chair angle4"></div>
+                    <div class="chair angle5"></div>
+                    <div class="chair angle6"></div>
+                    <div class="chair angle7"></div>
+                    <div class="chair angle8"></div>
+                  </section>
+                </div>
                 <div id="black" class="color black">
                   <section>
                     <div class="chair show angle1"></div>
@@ -190,7 +202,11 @@
                 <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
                 <button type="button" data-direction="next" class="icon-arrow-forward arrow"></button>
                 <input id="angleSlider" hidden class="angleSlider" type="range" min="1" max="8" step="1" value="1">
-                <div class="controls"><img src="assets/img/controls.png" alt="" height="50" width="274"></div>
+                <div id="controls" class="controls">
+                  <div class="point"></div>
+                  <div class="oval"></div>
+                  <img src="assets/img/controls.png" alt="" width="274">
+                </div>
                 <div class="switcher">
                   <div class="btn-group grid-8">
                     <button type="button" class="active">白色</button>
@@ -392,6 +408,12 @@
     $(this).addClass('active').siblings('.active').removeClass('active');
     $('#black').toggleClass('show');
   });
+
+  $('.switcher input[type=checkbox]').change(function(e) {
+    $('#chrome').toggleClass('show');
+  });
+
+  $('#controls')
 </script>
 </body>
 

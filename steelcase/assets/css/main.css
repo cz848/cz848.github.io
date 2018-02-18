@@ -63,7 +63,7 @@
 
 .color section {
     position: absolute;
-    top: 125px;
+    top: 120px;
     left: 93px;
     width: 189px;
 }
@@ -95,6 +95,15 @@
 }
 
 /* Color Definitions */
+.chrome {
+    background: transparent;
+    z-index: 3;
+}
+
+.chrome .chair {
+    background-image: url(../img/chair/chrome.png);
+}
+
 .black {
     background: transparent;
     z-index: 2;
@@ -184,7 +193,7 @@
 /* Chair Shadow Definition */
 .shadow {
     position: absolute;
-    top: 292px;
+    top: 287px;
     left: 19px;
     width: 263.655px;
     height: 112.455px;
@@ -192,24 +201,60 @@
     background-size: contain;
 }
 
+.oval {
+    position: absolute;
+    bottom: 13.5px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    border: 3px solid #431F37;
+    border-radius: 50%;
+    width: 286px;
+    height: 100px;
+}
+
 /* Controls */
 .angleSlider {
     position: absolute;
-    bottom: 90px;
-    padding: 0;
-    width: 80%;
-    height: 20px;
-    left: 50%;
-    margin-left: -40%;
 }
 
 .controls {
     position: absolute;
-    bottom: 90px;
+    bottom: 85px;
     width: 274px;
     height: 50px;
+    overflow: hidden;
     left: 50%;
     margin-left: -137px;
+}
+
+.controls .point {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    z-index: 2;
+    margin-left: -11px;
+    background: #6C3459;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+    -webkit-transition: -webkit-transform .1s ease-in;
+    transition: -webkit-transform .1s ease-in;
+    transition: transform .1s ease-in;
+    transition: transform .1s ease-in, -webkit-transform .1s ease-in;
+}
+
+.controls .point::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .icon-arrow-back {
@@ -305,7 +350,7 @@
     right: 30px;
     bottom: 30px;
     left: 30px;
-    z-index: 2;
+    z-index: 9;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
