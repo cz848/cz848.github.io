@@ -535,7 +535,7 @@
     position: relative;
     height: 533px;
     background: url(../img/video.png) 50% 100% no-repeat;
-    background-size: contain 100%;
+    background-size: 100%;
     color: white;
 }
 
