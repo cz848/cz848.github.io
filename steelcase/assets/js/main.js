@@ -6,7 +6,7 @@ $(document).mobile();
   var nrColors = 6;
   var nrAngels = 8;
   var currentColor = 1;
-  var currentAngle = 1;
+  var currentAngle = 4;
 
   /**
    * Wait for Document Load

@@ -96,128 +96,199 @@
               <div id="chair" class="chair-swiper">
                 <header class="tab-header">
                   <h1>选你所想</h1>
-                  <ul class="tab">
-                    <li class="active"><a>颜色</a></li>
-                    <li><a>纹理</a></li>
-                    <li><a>选配功能</a></li>
+                  <ul class="tab" data-tab>
+                    <li class="active"><a href="#panel1">颜色</a></li>
+                    <li><a href="#panel2">纹理</a></li>
+                    <li><a href="#panel3">选配功能</a></li>
                   </ul>
                 </header>
-                <div id="chrome" class="color chrome">
-                  <section>
-                    <div class="chair show angle1"></div>
-                    <div class="chair angle2"></div>
-                    <div class="chair angle3"></div>
-                    <div class="chair angle4"></div>
-                    <div class="chair angle5"></div>
-                    <div class="chair angle6"></div>
-                    <div class="chair angle7"></div>
-                    <div class="chair angle8"></div>
-                  </section>
-                </div>
-                <div id="black" class="color black">
-                  <section>
-                    <div class="chair show angle1"></div>
-                    <div class="chair angle2"></div>
-                    <div class="chair angle3"></div>
-                    <div class="chair angle4"></div>
-                    <div class="chair angle5"></div>
-                    <div class="chair angle6"></div>
-                    <div class="chair angle7"></div>
-                    <div class="chair angle8"></div>
-                  </section>
-                </div>
-                <div id="color1" class="color purple show">
-                  <section>
-                    <div class="chair show angle1"></div>
-                    <div class="chair angle2"></div>
-                    <div class="chair angle3"></div>
-                    <div class="chair angle4"></div>
-                    <div class="chair angle5"></div>
-                    <div class="chair angle6"></div>
-                    <div class="chair angle7"></div>
-                    <div class="chair angle8"></div>
-                  </section>
-                </div>
-                <div id="color2" class="color orange">
-                  <section>
-                    <div class="chair show angle1"></div>
-                    <div class="chair angle2"></div>
-                    <div class="chair angle3"></div>
-                    <div class="chair angle4"></div>
-                    <div class="chair angle5"></div>
-                    <div class="chair angle6"></div>
-                    <div class="chair angle7"></div>
-                    <div class="chair angle8"></div>
-                  </section>
-                </div>
-                <div id="color3" class="color red">
-                  <section>
-                    <div class="chair show angle1"></div>
-                    <div class="chair angle2"></div>
-                    <div class="chair angle3"></div>
-                    <div class="chair angle4"></div>
-                    <div class="chair angle5"></div>
-                    <div class="chair angle6"></div>
-                    <div class="chair angle7"></div>
-                    <div class="chair angle8"></div>
-                  </section>
-                </div>
-                <div id="color4" class="color teal">
-                  <section>
-                    <div class="chair show angle1"></div>
-                    <div class="chair angle2"></div>
-                    <div class="chair angle3"></div>
-                    <div class="chair angle4"></div>
-                    <div class="chair angle5"></div>
-                    <div class="chair angle6"></div>
-                    <div class="chair angle7"></div>
-                    <div class="chair angle8"></div>
-                  </section>
-                </div>
-                <div id="color5" class="color yellow">
-                  <section>
-                    <div class="chair show angle1"></div>
-                    <div class="chair angle2"></div>
-                    <div class="chair angle3"></div>
-                    <div class="chair angle4"></div>
-                    <div class="chair angle5"></div>
-                    <div class="chair angle6"></div>
-                    <div class="chair angle7"></div>
-                    <div class="chair angle8"></div>
-                  </section>
-                </div>
-                <div id="color6" class="color green">
-                  <section>
-                    <div class="chair show angle1"></div>
-                    <div class="chair angle2"></div>
-                    <div class="chair angle3"></div>
-                    <div class="chair angle4"></div>
-                    <div class="chair angle5"></div>
-                    <div class="chair angle6"></div>
-                    <div class="chair angle7"></div>
-                    <div class="chair angle8"></div>
-                  </section>
-                </div>
-                <div id="shadow" class="shadow"></div>
-                <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
-                <button type="button" data-direction="next" class="icon-arrow-forward arrow"></button>
-                <input id="angleSlider" hidden class="angleSlider" type="range" min="1" max="8" step="1" value="1">
-                <div id="controls" class="controls">
-                  <div class="point"></div>
-                  <div class="oval"></div>
-                  <img src="assets/img/controls.png" alt="" width="274">
-                </div>
-                <div class="switcher">
-                  <div class="btn-group grid-8">
-                    <button type="button" class="active">白色</button>
-                    <button type="button">黑色</button>
-                  </div>
-                  <div class="switch-group grid-4">
-                    <label for="radioSwitch">金属色</label>
-                    <div class="switch round">
-                      <input id="radioSwitch" type="checkbox">
-                      <label for="radioSwitch"></label>
+                <div class="tab-content">
+                  <div class="content active" id="panel1">
+                    <div id="chrome" class="color chrome">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
                     </div>
+                    <div id="black" class="color black">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
+                    </div>
+                    <div id="color1" class="color purple show">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
+                    </div>
+                    <div id="color2" class="color orange">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
+                    </div>
+                    <div id="color3" class="color red">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
+                    </div>
+                    <div id="color4" class="color teal">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
+                    </div>
+                    <div id="color5" class="color yellow">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
+                    </div>
+                    <div id="color6" class="color green">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
+                    </div>
+                    <div id="shadow" class="shadow"></div>
+                    <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
+                    <button type="button" data-direction="next" class="icon-arrow-forward arrow"></button>
+                    <input id="angleSlider" hidden type="range" min="1" max="8" step="1" value="4">
+                    <label for="angleSlider" id="controls" class="controls">
+                      <i class="point angle1"></i>
+                      <i class="point angle2"></i>
+                      <i class="point angle3"></i>
+                      <i class="point angle4 show"></i>
+                      <i class="point angle5"></i>
+                      <i class="point angle6"></i>
+                      <i class="point angle7"></i>
+                      <i class="point angle8"></i>
+                      <i class="oval angle1"></i>
+                      <i class="oval angle2"></i>
+                      <i class="oval angle3"></i>
+                      <i class="oval angle4 show"></i>
+                      <i class="oval angle5"></i>
+                      <i class="oval angle6"></i>
+                      <i class="oval angle7"></i>
+                      <i class="oval angle8"></i>
+                      <img src="assets/img/controls.png" alt="" width="274">
+                    </label>
+                    <div class="switcher">
+                      <div class="btn-group grid-8">
+                        <button type="button" class="active">白色</button>
+                        <button type="button">黑色</button>
+                      </div>
+                      <div class="switch-group grid-4">
+                        <label for="radioSwitch">金属色</label>
+                        <div class="switch round">
+                          <input id="radioSwitch" type="checkbox">
+                          <label for="radioSwitch"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content" id="panel2">
+                    <div id="chrome" class="pattern chrome">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="black" class="pattern black">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="pattern1" class="pattern purple show">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="shadow" class="shadow"></div>
+                    <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
+                    <button type="button" data-direction="next" class="icon-arrow-forward arrow"></button>
+                    <div class="switcher">
+                      <div class="btn-group grid-8">
+                        <button type="button" class="active">白色</button>
+                        <button type="button">黑色</button>
+                      </div>
+                      <div class="switch-group grid-4">
+                        <label for="radioSwitch">金属色</label>
+                        <div class="switch round">
+                          <input id="radioSwitch" type="checkbox">
+                          <label for="radioSwitch"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content" id="panel3">
+                    <div id="range1" class="range headrest show">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="range2" class="range stool">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="range3" class="range hanger">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="shadow" class="shadow"></div>
+                    <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
+                    <button type="button" data-direction="next" class="icon-arrow-forward arrow"></button>
                   </div>
                 </div>
               </div>
@@ -413,7 +484,60 @@
     $('#chrome').toggleClass('show');
   });
 
+
+  var startX = 0;
+  var currentX = 0;
+  var startY = 0;
+  var currentY = 0;
+  var start = 8.5;
+  var end = 274 - start * 2 - 22;
+  var angNum = 4;
+  var distance = Math.floor(end / 7 * 10) / 10;
+  var iteration = 0;
+  var offsetX = (window.innerWidth - 274) / 2;
+  var grid = [];
+  for (var i = 0; i < 8; i++) {
+    grid[i] = distance * i + start;
+  }
+  console.log(grid);
   $('#controls')
+    .on('touchstart', function(e) {
+      // startX = currentX = e.originalEvent.targetTouches[0].pageX - offsetX;
+      startY = currentY = e.originalEvent.targetTouches[0].pageY;
+    })
+    .on('touchmove', function(e) {
+      currentX = e.originalEvent.targetTouches[0].pageX - offsetX;
+      currentY = e.originalEvent.targetTouches[0].pageY;
+      if (Math.abs(currentY - startY)) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+
+      if (currentX < start || currentX > end + start + 11) {
+        return false;
+      }
+
+      console.log(currentX, start);
+      var diff = currentX;
+      // for (var i = 0; i < 8; i++) {
+      // if (diff > 0 && diff > distance / 2) {
+      //   $('#angleSlider').val(++angNum).trigger('input');
+      //   // startX = grid[angNum - 1];
+      // }
+      // else if (diff < 0 && diff < -distance / 2) {
+      //   $('#angleSlider').val(--angNum).trigger('input');
+      //   // startX = grid[angNum - 1];
+      // }
+      if (diff > grid[angNum - 1] + distance / 2 + 11) {
+        $('#angleSlider').val(++angNum).trigger('input');
+      }
+      else if (diff < grid[angNum - 1] - distance / 2 + 11) {
+        $('#angleSlider').val(--angNum).trigger('input');
+      }
+      // }
+    })
+    .on('touchend', function(e) {
+    });
 </script>
 </body>
 

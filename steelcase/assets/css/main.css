@@ -46,8 +46,18 @@
     border-bottom: 2px solid #fff;
 }
 
+.tab-content .content {
+    display: none;
+}
+
+.tab-content .active {
+    display: block;
+}
+
 /* Base Color Properties */
-.color {
+.color,
+.pattern,
+.range {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -61,14 +71,18 @@
             transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.color section {
+.color section,
+.pattern section,
+.range section {
     position: absolute;
     top: 120px;
     left: 93px;
     width: 189px;
 }
 
-.color .chair {
+.color .chair,
+.pattern .chair,
+.range .chair {
     position: absolute;
     top: 0;
     left: 0;
@@ -81,17 +95,23 @@
     transition: opacity 0.1s;
 }
 
-.color .chair.show {
+.color .chair.show,
+.pattern .chair.show,
+.range .chair.show {
     opacity: 1;
 }
 
-/* Scale the color area to show */
-.show {
+.color.show,
+.pattern.show,
+.range.show {
+    /* Scale the color area to show */
     width: 100%;
 }
 
-.alwaysshow {
-    width: 100% !important;
+.headrest,
+.stool,
+.hanger {
+    background-color: #45474B;
 }
 
 /* Color Definitions */
@@ -162,78 +182,113 @@
 }
 
 /* Angle Definitions */
-.angle1 {
+.angleSlider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    bottom: 150px;
+    width: 80%;
+    margin: auto;
+}
+
+.color .angle1 {
     background-position: 0px 0 !important;
 }
 
-.angle2 {
+.color .angle2 {
     background-position: -189px 0 !important;
 }
 
-.angle3 {
+.color .angle3 {
     background-position: -378px 0 !important;
 }
 
-.angle4 {
+.color .angle4 {
     background-position: -567px 0 !important;
 }
 
-.angle5 {
+.color .angle5 {
     background-position: -756px 0 !important;
 }
 
-.angle6 {
+.color .angle6 {
     background-position: -945px 0 !important;
 }
 
-.angle7 {
+.color .angle7 {
     background-position: -1134px 0 !important;
 }
 
 /* Chair Shadow Definition */
 .shadow {
     position: absolute;
-    top: 287px;
-    left: 19px;
-    width: 263.655px;
-    height: 112.455px;
-    background-image: url(../img/shadow.png);
+    top: 291px;
+    left: 21px;
+    width: 269.325px;
+    height: 117.18px;
+    background-image: url(../img/chair/shadow.png);
     background-size: contain;
 }
 
-.oval {
-    position: absolute;
-    bottom: 13.5px;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    border: 3px solid #431F37;
-    border-radius: 50%;
-    width: 286px;
-    height: 100px;
-}
-
 /* Controls */
-.angleSlider {
-    position: absolute;
-}
-
 .controls {
     position: absolute;
     bottom: 85px;
     width: 274px;
-    height: 50px;
+    height: 52px;
     overflow: hidden;
     left: 50%;
     margin-left: -137px;
 }
 
-.controls .point {
+.controls .oval {
+    display: none;
     position: absolute;
-    bottom: 4px;
-    left: 50%;
+    left: 0;
+    top: 0;
+    width: 274px;
+    height: 52px;
+    background: url(../img/oval.png) 0 0 no-repeat;
+    background-size: contain;
+}
+
+.controls .oval.angle1 {
+    clip: rect(0px, 120.5px, 52px, 19.5px);
+}
+
+.controls .oval.angle2 {
+    clip: rect(0px, 120.5px, 52px, 53.5px);
+}
+
+.controls .oval.angle3 {
+    clip: rect(0px, 120.5px, 52px, 87px);
+}
+
+.controls .oval.angle4 {
+    clip: rect(0px, 120.5px, 52px, 120.5px);
+}
+
+.controls .oval.angle5 {
+    clip: rect(0px, 154px, 52px, 120.5px);
+}
+
+.controls .oval.angle6 {
+    clip: rect(0px, 188px, 52px, 120.5px);
+}
+
+.controls .oval.angle7 {
+    clip: rect(0px, 221px, 52px, 120.5px);
+}
+
+.controls .oval.angle8 {
+    clip: rect(0px, 254.5px, 52px, 120.5px);
+}
+
+.controls .point {
+    display: none;
+    position: absolute;
     z-index: 2;
-    margin-left: -11px;
     background: #6C3459;
     width: 22px;
     height: 22px;
@@ -254,7 +309,51 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.controls .point.angle1 {
+    top: 4.5px;
+    left: 8.5px;
+}
+
+.controls .point.angle2 {
+    top: 16.5px;
+    left: 42.5px;
+}
+
+.controls .point.angle3 {
+    top: 22.5px;
+    left: 76px;
+}
+
+.controls .point.angle4 {
+    top: 26px;
+    left: 109.5px;
+}
+
+.controls .point.angle5 {
+    top: 26px;
+    left: 143px;
+}
+
+.controls .point.angle6 {
+    top: 22.5px;
+    left: 177px;
+}
+
+.controls .point.angle7 {
+    top: 16.5px;
+    left: 210px;
+}
+
+.controls .point.angle8 {
+    top: 4.5px;
+    left: 243.5px;
+}
+
+.controls .show {
+    display: block;
 }
 
 .icon-arrow-back {
@@ -290,55 +389,6 @@
 
 .arrow:hover {
     box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
-}
-
-.video .cover {
-    position: relative;
-    height: 533px;
-    background: url(../img/video.png) 50% 100% no-repeat;
-    background-size: contain 100%;
-    color: white;
-}
-
-.video .cover h1 {
-    position: absolute;
-    left: 176px;
-    top: 110px;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-}
-
-.video .cover i {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    border-radius: 100%;
-    color: #979797;
-    font-size: 26px;
-    line-height: 60px;
-    text-align: center;
-}
-
-.video .cover p {
-    position: absolute;
-    bottom: 41px;
-    right: 36px;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: right;
-    margin-bottom: 0;
-}
-
-.video .cover img {
-    height: 17px;
-    vertical-align: -1px;
 }
 
 .placeholder {
@@ -481,6 +531,55 @@
     resize: none;
 }
 
+.video .cover {
+    position: relative;
+    height: 533px;
+    background: url(../img/video.png) 50% 100% no-repeat;
+    background-size: contain 100%;
+    color: white;
+}
+
+.video .cover h1 {
+    position: absolute;
+    left: 176px;
+    top: 110px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+}
+
+.video .cover i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 100%;
+    color: #979797;
+    font-size: 26px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.video .cover p {
+    position: absolute;
+    bottom: 41px;
+    right: 36px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.video .cover img {
+    height: 17px;
+    vertical-align: -1px;
+}
+
 .dimensions {
     padding: 27px 0 50px 30px;
     overflow: hidden;
@@ -497,7 +596,7 @@
 
 .description {
     margin-top: 54px;
-    width: 100px;
+    width: 102px;
     font-size: 14px;
     line-height: 20px;
 }

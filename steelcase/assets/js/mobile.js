@@ -3074,7 +3074,7 @@
 
         settings: {
             active_class: 'active',
-            content_class: 'tabs-content',
+            content_class: 'tab-content',
             panel_class: 'content',
             callback: function() {},
             deep_linking: false,
@@ -3172,7 +3172,7 @@
             var self = this,
                 tabs = tab.closest('[data-' + this.name + ']'),
                 tab_link = tab.find('a'),
-                anchor = tab.children('a').first(),
+                anchor = tab_link.first(),
                 target_hash = '#' + anchor.attr('href').split('#')[1],
                 target = $(target_hash),
                 siblings = tab.siblings(),
