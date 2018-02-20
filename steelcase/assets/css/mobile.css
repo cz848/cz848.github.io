@@ -1602,8 +1602,8 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: rgba(204, 204, 204, 0.9);
-    box-shadow: 0 0 5px rgba(204, 204, 204, 0.9);
+    border-color: white;
+    box-shadow: 0 0 5px #f6f6f6;
 }
 
 input:focus,
@@ -4317,7 +4317,7 @@ form .row > textarea.columns,
 .has-error textarea:focus,
 .has-error select:focus {
     background: #FFFFFF;
-    border-color: #cccccc;
+    border-color: white;
 }
 
 .has-error .alert-box {
