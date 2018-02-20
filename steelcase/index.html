@@ -104,30 +104,6 @@
                 </header>
                 <div class="tab-content">
                   <div class="content animated fade-in" id="panel1">
-                    <div id="chrome" class="color chrome">
-                      <section>
-                        <div class="chair angle1"></div>
-                        <div class="chair angle2"></div>
-                        <div class="chair angle3"></div>
-                        <div class="chair angle4 show"></div>
-                        <div class="chair angle5"></div>
-                        <div class="chair angle6"></div>
-                        <div class="chair angle7"></div>
-                        <div class="chair angle8"></div>
-                      </section>
-                    </div>
-                    <div id="black" class="color black">
-                      <section>
-                        <div class="chair angle1"></div>
-                        <div class="chair angle2"></div>
-                        <div class="chair angle3"></div>
-                        <div class="chair angle4 show"></div>
-                        <div class="chair angle5"></div>
-                        <div class="chair angle6"></div>
-                        <div class="chair angle7"></div>
-                        <div class="chair angle8"></div>
-                      </section>
-                    </div>
                     <div id="color1" class="color purple show">
                       <section>
                         <div class="chair angle1"></div>
@@ -200,11 +176,35 @@
                         <div class="chair angle8"></div>
                       </section>
                     </div>
+                    <div id="black" class="color black">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
+                    </div>
+                    <div id="chrome" class="color chrome">
+                      <section>
+                        <div class="chair angle1"></div>
+                        <div class="chair angle2"></div>
+                        <div class="chair angle3"></div>
+                        <div class="chair angle4 show"></div>
+                        <div class="chair angle5"></div>
+                        <div class="chair angle6"></div>
+                        <div class="chair angle7"></div>
+                        <div class="chair angle8"></div>
+                      </section>
+                    </div>
                     <div id="shadow" class="shadow"></div>
                     <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
                     <button type="button" data-direction="next" class="icon-arrow-forward arrow"></button>
                     <input id="angleSlider" hidden type="range" min="1" max="8" step="1" value="4">
-                    <label for="angleSlider" id="controls" class="controls">
+                    <label for="angleSlider" id="controls" class="controls purple">
                       <i class="point angle1"></i>
                       <i class="point angle2"></i>
                       <i class="point angle3"></i>
@@ -229,25 +229,15 @@
                         <button type="button">黑色</button>
                       </div>
                       <div class="switch-group grid-4">
-                        <label for="radioSwitch">金属色</label>
+                        <label for="chromeSwitch">金属色</label>
                         <div class="switch round">
-                          <input id="radioSwitch" type="checkbox">
-                          <label for="radioSwitch"></label>
+                          <input id="chromeSwitch" type="checkbox">
+                          <label for="chromeSwitch"></label>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="content animated" id="panel2">
-                    <div id="chrome2" class="pattern chrome">
-                      <section>
-                        <div class="chair"></div>
-                      </section>
-                    </div>
-                    <div id="black2" class="pattern black">
-                      <section>
-                        <div class="chair"></div>
-                      </section>
-                    </div>
                     <div id="pattern1" class="pattern pattern1 show">
                       <section>
                         <div class="chair"></div>
@@ -273,6 +263,16 @@
                         <div class="chair"></div>
                       </section>
                     </div>
+                    <div id="black2" class="pattern black">
+                      <section>
+                        <div class="chair angle4"></div>
+                      </section>
+                    </div>
+                    <div id="chrome2" class="pattern chrome">
+                      <section>
+                        <div class="chair angle4"></div>
+                      </section>
+                    </div>
                     <div id="shadow" class="shadow"></div>
                     <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
                     <button type="button" data-direction="next" class="icon-arrow-forward arrow"></button>
@@ -295,19 +295,19 @@
                       <section>
                         <div class="chair"></div>
                       </section>
-                      <h1>headrest</h1>
+                      <h1>头枕式</h1>
                     </div>
                     <div id="range2" class="range range2">
                       <section>
                         <div class="chair"></div>
                       </section>
-                      <h1>stool</h1>
+                      <h1>脚架式</h1>
                     </div>
                     <div id="range3" class="range range3">
                       <section>
                         <div class="chair"></div>
                       </section>
-                      <h1>headrest</h1>
+                      <h1>衣架式</h1>
                     </div>
                     <!-- <div id="shadow" class="shadow"></div> -->
                     <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
@@ -382,20 +382,8 @@
     }
   }, 0);
 
-  // $('#chair .tab')
-  //   .mobile('tab', {
-  //     active_class: 'fade-in'
-  //   })
-  //   .on('toggled.tab', function(e) {
-  //     $('.range h1').each(function() {
-  //       $(this).css('left', (window.innerWidth - $(this).width()) / 2);
-  //     });
-  //   });
   $('#chair .tab li a').on('click', function(e) {
     e.preventDefault();
-    $('.range h1').each(function() {
-      $(this).css('left', (window.innerWidth - $(this).width()) / 2);
-    });
     $(this).parent().addClass('active').siblings('.active').removeClass('active');
     $(this.getAttribute('href'))
       .css('z-index', 2)
@@ -403,6 +391,9 @@
       .on('animationend', function() {
         $(this).siblings('.fade-in').removeClass('fade-in').off('animationend');
       })
+      .find('h1')
+        .css('left', (window.innerWidth - $('#range1 h1').width()) / 2)
+      .end()
       .siblings('.fade-in').css('z-index', '');
         // .removeClass('fast')
         // .addClass('fade-out')
@@ -526,11 +517,11 @@
   $('.switcher .btn-group button').click(function(e) {
     if ($(this).hasClass('active')) return;
     $(this).addClass('active').siblings('.active').removeClass('active');
-    $('#black').toggleClass('show');
+    $(this).parents('.content').find('.black').toggleClass('show');
   });
 
   $('.switcher input[type=checkbox]').change(function(e) {
-    $('#chrome').toggleClass('show');
+    $(this).parents('.content').find('.chrome').toggleClass('show');
   });
 
 
@@ -548,7 +539,6 @@
   for (var i = 0; i < 8; i++) {
     grid[i] = distance * i + start;
   }
-  console.log(grid);
   $('#controls')
     .on('touchstart', function(e) {
       // startX = currentX = e.originalEvent.targetTouches[0].pageX - offsetX;
@@ -566,7 +556,6 @@
         return false;
       }
 
-      console.log(currentX, start);
       var diff = currentX;
       // for (var i = 0; i < 8; i++) {
       // if (diff > 0 && diff > distance / 2) {

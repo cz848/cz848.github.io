@@ -1,3 +1,52 @@
+.nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transition: 0.3s -webkit-transform;
+    transition: 0.3s -webkit-transform;
+    transition: 0.3s transform;
+    transition: 0.3s transform, 0.3s -webkit-transform;
+}
+
+.nav a {
+    line-height: 2.4;
+    font-weight: bold;
+}
+
+.nav li:first-child a {
+    line-height: inherit;
+}
+
+.nav .controller > a::before {
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.intro {
+    padding: 36px 30px;
+    font: 18px/26px sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: justify;
+    background-color: white;
+}
+
+.autoheight {
+    overflow: visible;
+}
+
+.force-autoheight {
+    height: auto !important;
+}
+
 /* Base Chair Container */
 .chair-swiper {
     height: calc(100vh - 70px);
@@ -79,8 +128,8 @@
 .pattern section,
 .range section {
     position: absolute;
-    left: 93px;
-    width: 189px;
+    left: 92.5px;
+    width: 190px;
 }
 
 .color .chair,
@@ -90,7 +139,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-repeat: no-repeat;
+    height: 285px;
+    background: url(../img/chair/colors.png) no-repeat;
 }
 
 .color.show,
@@ -105,23 +155,246 @@
 }
 
 .color .chair {
-    height: 277.632922px;
-    background-size: 800% 100%;
+    background-size: 800% 600%;
     opacity: 0;
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
 }
 
 .color .chair.show {
     opacity: 1;
 }
 
+.color.green {
+    background: #B0C242;
+}
+
+.color.orange {
+    background: #EB7E37;
+}
+
+.color.purple {
+    background: #6C3459;
+}
+
+.color.red {
+    background: #B92920;
+}
+
+.color.teal {
+    background: #11A0C2;
+}
+
+.color.yellow {
+    background: #FFC330;
+}
+
+.purple .angle1 {
+    background-position: 0px 0px;
+}
+
+.orange .angle1 {
+    background-position: 0px -285px;
+}
+
+.red .angle1 {
+    background-position: 0px -570px;
+}
+
+.teal .angle1 {
+    background-position: 0px -855px;
+}
+
+.yellow .angle1 {
+    background-position: 0px -1140px;
+}
+
+.green .angle1 {
+    background-position: 0px -1425px;
+}
+
+.purple .angle2 {
+    background-position: -190px 0px;
+}
+
+.orange .angle2 {
+    background-position: -190px -285px;
+}
+
+.red .angle2 {
+    background-position: -190px -570px;
+}
+
+.teal .angle2 {
+    background-position: -190px -855px;
+}
+
+.yellow .angle2 {
+    background-position: -190px -1140px;
+}
+
+.green .angle2 {
+    background-position: -190px -1425px;
+}
+
+.purple .angle3 {
+    background-position: -380px 0px;
+}
+
+.orange .angle3 {
+    background-position: -380px -285px;
+}
+
+.red .angle3 {
+    background-position: -380px -570px;
+}
+
+.teal .angle3 {
+    background-position: -380px -855px;
+}
+
+.yellow .angle3 {
+    background-position: -380px -1140px;
+}
+
+.green .angle3 {
+    background-position: -380px -1425px;
+}
+
+.purple .angle4 {
+    background-position: -570px 0px;
+}
+
+.orange .angle4 {
+    background-position: -570px -285px;
+}
+
+.red .angle4 {
+    background-position: -570px -570px;
+}
+
+.teal .angle4 {
+    background-position: -570px -855px;
+}
+
+.yellow .angle4 {
+    background-position: -570px -1140px;
+}
+
+.green .angle4 {
+    background-position: -570px -1425px;
+}
+
+.purple .angle5 {
+    background-position: -760px 0px;
+}
+
+.orange .angle5 {
+    background-position: -760px -285px;
+}
+
+.red .angle5 {
+    background-position: -760px -570px;
+}
+
+.teal .angle5 {
+    background-position: -760px -855px;
+}
+
+.yellow .angle5 {
+    background-position: -760px -1140px;
+}
+
+.green .angle5 {
+    background-position: -760px -1425px;
+}
+
+.purple .angle6 {
+    background-position: -950px 0px;
+}
+
+.orange .angle6 {
+    background-position: -950px -285px;
+}
+
+.red .angle6 {
+    background-position: -950px -570px;
+}
+
+.teal .angle6 {
+    background-position: -950px -855px;
+}
+
+.yellow .angle6 {
+    background-position: -950px -1140px;
+}
+
+.green .angle6 {
+    background-position: -950px -1425px;
+}
+
+.purple .angle7 {
+    background-position: -1140px 0px;
+}
+
+.orange .angle7 {
+    background-position: -1140px -285px;
+}
+
+.red .angle7 {
+    background-position: -1140px -570px;
+}
+
+.teal .angle7 {
+    background-position: -1140px -855px;
+}
+
+.yellow .angle7 {
+    background-position: -1140px -1140px;
+}
+
+.green .angle7 {
+    background-position: -1140px -1425px;
+}
+
+.purple .angle8 {
+    background-position: -1330px 0px;
+}
+
+.orange .angle8 {
+    background-position: -1330px -285px;
+}
+
+.red .angle8 {
+    background-position: -1330px -570px;
+}
+
+.teal .angle8 {
+    background-position: -1330px -855px;
+}
+
+.yellow .angle8 {
+    background-position: -1330px -1140px;
+}
+
+.green .angle8 {
+    background-position: -1330px -1425px;
+}
+
+/* Chair Shadow Definition */
+.shadow {
+    position: absolute;
+    top: 294px;
+    left: 19px;
+    width: 265.05px;
+    height: 113.05px;
+    background-image: url(../img/shadow.png);
+    background-size: contain;
+}
+
 .pattern section {
-    top: 140px;
+    top: 134px;
 }
 
 .pattern .chair {
-    height: 277.53304px;
     background: url(../img/chair/pattern.png) no-repeat;
     background-size: 500% 100%;
 }
@@ -141,7 +414,7 @@
 }
 
 .pattern2 .chair {
-    background-position: -189px 0;
+    background-position: -190px 0;
 }
 
 .pattern3 {
@@ -150,7 +423,7 @@
 }
 
 .pattern3 .chair {
-    background-position: -378px 0;
+    background-position: -380px 0;
 }
 
 .pattern4 {
@@ -159,7 +432,7 @@
 }
 
 .pattern4 .chair {
-    background-position: -567px 0;
+    background-position: -570px 0;
 }
 
 .pattern5 {
@@ -168,7 +441,7 @@
 }
 
 .pattern5 .chair {
-    background-position: -756px 0;
+    background-position: -760px 0;
 }
 
 .range {
@@ -192,6 +465,7 @@
     position: absolute;
     bottom: 38px;
     left: 50%;
+    min-width: 54px;
     color: white;
     font-weight: 400;
     font-size: 18px;
@@ -218,70 +492,80 @@
 }
 
 /* Color Definitions */
+.black,
 .chrome {
-    background: transparent;
-    z-index: 3;
-}
-
-.chrome .chair {
-    background-image: url(../img/chair/chrome.png);
-}
-
-.black {
     background: transparent;
     z-index: 2;
 }
 
-.black .chair {
-    background-image: url(../img/chair/black.png);
+.black .chair,
+.chrome .chair {
+    background-image: url(../img/chair/frame.png);
+    background-size: 800% 200%;
 }
 
-.green {
-    background: #A9BB39;
+.black .angle1 {
+    background-position: 0px 0px;
 }
 
-.green .chair {
-    background-image: url(../img/chair/green.png);
+.chrome .angle1 {
+    background-position: 0px -285px;
 }
 
-.orange {
-    background: #F78033;
+.black .angle2 {
+    background-position: -190px 0px;
 }
 
-.orange .chair {
-    background-image: url(../img/chair/orange.png);
+.chrome .angle2 {
+    background-position: -190px -285px;
 }
 
-.purple {
-    background: #71375E;
+.black .angle3 {
+    background-position: -380px 0px;
 }
 
-.purple .chair {
-    background-image: url(../img/chair/purple.png);
+.chrome .angle3 {
+    background-position: -380px -285px;
 }
 
-.red {
-    background: #BB2F22;
+.black .angle4 {
+    background-position: -570px 0px;
 }
 
-.red .chair {
-    background-image: url(../img/chair/red.png);
+.chrome .angle4 {
+    background-position: -570px -285px;
 }
 
-.teal {
-    background: #30AFCF;
+.black .angle5 {
+    background-position: -760px 0px;
 }
 
-.teal .chair {
-    background-image: url(../img/chair/teal.png);
+.chrome .angle5 {
+    background-position: -760px -285px;
 }
 
-.yellow {
-    background: #FEC745;
+.black .angle6 {
+    background-position: -950px 0px;
 }
 
-.yellow .chair {
-    background-image: url(../img/chair/yellow.png);
+.chrome .angle6 {
+    background-position: -950px -285px;
+}
+
+.black .angle7 {
+    background-position: -1140px 0px;
+}
+
+.chrome .angle7 {
+    background-position: -1140px -285px;
+}
+
+.black .angle8 {
+    background-position: -1330px 0px;
+}
+
+.chrome .angle8 {
+    background-position: -1330px -285px;
 }
 
 /* Angle Definitions */
@@ -293,45 +577,6 @@
     bottom: 150px;
     width: 80%;
     margin: auto;
-}
-
-.color .angle1 {
-    background-position: 0px 0 !important;
-}
-
-.color .angle2 {
-    background-position: -189px 0 !important;
-}
-
-.color .angle3 {
-    background-position: -378px 0 !important;
-}
-
-.color .angle4 {
-    background-position: -567px 0 !important;
-}
-
-.color .angle5 {
-    background-position: -756px 0 !important;
-}
-
-.color .angle6 {
-    background-position: -945px 0 !important;
-}
-
-.color .angle7 {
-    background-position: -1134px 0 !important;
-}
-
-/* Chair Shadow Definition */
-.shadow {
-    position: absolute;
-    top: 291px;
-    left: 21px;
-    width: 269.325px;
-    height: 117.18px;
-    background-image: url(../img/chair/shadow.png);
-    background-size: contain;
 }
 
 /* Controls */
@@ -392,16 +637,13 @@
     display: none;
     position: absolute;
     z-index: 2;
-    background: #6C3459;
     width: 22px;
     height: 22px;
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
-    -webkit-transition: -webkit-transform .1s ease-in;
-    transition: -webkit-transform .1s ease-in;
-    transition: transform .1s ease-in;
-    transition: transform .1s ease-in, -webkit-transform .1s ease-in;
+    -webkit-transition: background .3s ease-in;
+    transition: background .3s ease-in;
 }
 
 .controls .point::before {
@@ -453,6 +695,30 @@
 .controls .point.angle8 {
     top: 4.5px;
     left: 243.5px;
+}
+
+.controls.purple .point {
+    background: #6C3459;
+}
+
+.controls.teal .point {
+    background: #11A0C2;
+}
+
+.controls.green .point {
+    background: #B0C242;
+}
+
+.controls.yellow .point {
+    background: #FFC330;
+}
+
+.controls.red .point {
+    background: #B92920;
+}
+
+.controls.orange .point {
+    background: #EB7E37;
 }
 
 .controls .show {
@@ -563,75 +829,6 @@
 
 .switcher .switch.active > label {
     opacity: 1;
-}
-
-.nav {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 100;
-    width: 100%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    -webkit-transition: 0.3s -webkit-transform;
-    transition: 0.3s -webkit-transform;
-    transition: 0.3s transform;
-    transition: 0.3s transform, 0.3s -webkit-transform;
-}
-
-.nav a {
-    line-height: 2.4;
-    font-weight: bold;
-}
-
-.nav li:first-child a {
-    line-height: inherit;
-}
-
-.nav .controller > a::before {
-    left: 0;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.intro {
-    padding: 36px 30px;
-    font: 18px/26px sans-serif;
-    font-weight: 300;
-    color: black;
-    text-align: justify;
-    background-color: white;
-}
-
-.autoheight {
-    overflow: visible;
-}
-
-.force-autoheight {
-    height: auto !important;
-}
-
-.form {
-    background-color: #f6f6f6;
-    padding: 30px;
-}
-
-.form-row label {
-    font-size: 18px;
-    line-height: 24px;
-}
-
-.form-row input,
-.form-row select,
-.form-row textarea {
-    background-color: white;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-    border-radius: 2px;
-    border: 0 none;
-    resize: none;
 }
 
 .video .cover {
@@ -745,4 +942,71 @@
     height: 10px;
     font-size: 24px;
     vertical-align: top;
+}
+
+/* Get in touch */
+.well {
+    padding: 30px 30px 60px;
+    color: #111111;
+}
+
+.well h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.well p {
+    line-height: 24px;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.form {
+    background-color: #f6f6f6;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    margin-top: 15px;
+}
+
+.form-row label {
+    font-size: 18px;
+}
+
+.form-row input.columns {
+    margin-left: 10px !important;
+}
+
+.form-row textarea {
+    height: 195px;
+}
+
+.form-actions {
+    margin: 30px -30px -30px;
+}
+
+.form-actions button {
+    border: 0 none;
+    text-align: right;
+}
+
+.form-actions button i {
+    display: block;
+    margin-top: 12px;
+    height: 11px;
+    font-size: 26px;
+}
+
+.splash header {
+    background: url(../img/splash-bg.png) 0 0 no-repeat;
+    height: 214px;
+    text-align: center;
+    line-height: 214px;
+    color: white;
+}
+
+.splash header i {
+    font-size: 120px;
 }

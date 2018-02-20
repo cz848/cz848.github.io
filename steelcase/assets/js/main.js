@@ -69,6 +69,8 @@ $(document).mobile();
         break;
     }
 
+    $('#controls').attr('class', 'controls' + $('#color' + currentColor).attr('class').replace('color', ''));
+
     if (currentColor === nrColors || currentColor === 1) {
       this.disabled = true;
     }
@@ -127,6 +129,10 @@ $(document).mobile();
 
         // show new colour
         $('#range' + currentRange).addClass('show');
+          // .find('h1').each(function() {
+          //   $(this).css('left', (window.innerWidth - $(this).width()) / 2);
+          // });
+
         break;
 
       case 'prev':

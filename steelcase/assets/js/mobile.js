@@ -3624,7 +3624,7 @@
             error_labels: true, // labels with a for="inputId" will receive an `error` class
             error_class: 'has-error', // labels with a for="inputId" will receive an `error` class
             feedback: '.form-row', // support a parent(s) selector for feedback an error message box
-            alert_element: '.alert-box', // for an error message box class
+            alert_element: '.error', // for an error message box class
             isAjax: false, // You can set ajax mode
             preventDefault: false,
             // the amount of time Validator will take before it validates the form (in ms).
