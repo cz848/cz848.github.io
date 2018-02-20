@@ -5,14 +5,20 @@ $(document).mobile();
 
   var nrColors = 6;
   var nrAngels = 8;
+  var nrPatterns = 5;
+  var nrRanges = 3;
   var currentColor = 1;
+  var currentPattern = 1;
+  var currentRange = 1;
   var currentAngle = 4;
 
   /**
    * Wait for Document Load
    */
   // Init Event Handlers
-  $('.arrow').click(changeColor);
+  $('#panel1 .arrow').click(changeColor);
+  $('#panel2 .arrow').click(changePattern);
+  $('#panel3 .arrow').click(changeRange);
   $('#angleSlider').on('input', changeAngle);
 
   // var margin = ((window.innerWidth - 189) / 2);
@@ -67,6 +73,78 @@ $(document).mobile();
       this.disabled = true;
     }
     else if (currentColor === nrColors - 1 || currentColor === 2) {
+      $(this).siblings('.arrow')[0].disabled = false;
+    }
+  }
+
+  /**
+   * Handle Pattern Change based on CTA id 
+   */
+  function changePattern(e) {
+    switch (this.dataset.direction) {
+      case 'next':
+        // check if end of colours are reached
+        if (currentPattern === nrPatterns) return false;
+
+        // increase pattern count
+        currentPattern++;
+
+        // show new colour
+        $('#pattern' + currentPattern).addClass('show');
+        break;
+
+      case 'prev':
+        // check if beginning of pattern range is reached        
+        if (currentPattern === 1) return false;
+
+        // remove current colour
+        $('#pattern' + currentPattern).removeClass('show');
+
+        // decrease colour count;
+        currentPattern--;
+        break;
+    }
+
+    if (currentPattern === nrPatterns || currentPattern === 1) {
+      this.disabled = true;
+    }
+    else if (currentPattern === nrPatterns - 1 || currentPattern === 2) {
+      $(this).siblings('.arrow')[0].disabled = false;
+    }
+  }
+
+  /**
+   * Handle Range Change based on CTA id 
+   */
+  function changeRange(e) {
+    switch (this.dataset.direction) {
+      case 'next':
+        // check if end of colours are reached
+        if (currentRange === nrRanges) return false;
+
+        // increase range count
+        currentRange++;
+
+        // show new colour
+        $('#range' + currentRange).addClass('show');
+        break;
+
+      case 'prev':
+        // check if beginning of range range is reached        
+        if (currentRange === 1) return false;
+
+        // remove current colour
+        $('#range' + currentRange).removeClass('show');
+
+        // decrease colour count;
+        currentRange--;
+        break;
+    }
+
+    if (currentRange === nrRanges || currentRange === 1) {
+      this.disabled = true;
+    }
+    else if (currentRange === nrRanges - 1 || currentRange === 2) {
       $(this).siblings('.arrow')[0].disabled = false;
     }
   }

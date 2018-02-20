@@ -96,14 +96,14 @@
               <div id="chair" class="chair-swiper">
                 <header class="tab-header">
                   <h1>选你所想</h1>
-                  <ul class="tab" data-tab>
+                  <ul class="tab">
                     <li class="active"><a href="#panel1">颜色</a></li>
                     <li><a href="#panel2">纹理</a></li>
                     <li><a href="#panel3">选配功能</a></li>
                   </ul>
                 </header>
                 <div class="tab-content">
-                  <div class="content active" id="panel1">
+                  <div class="content animated fade-in" id="panel1">
                     <div id="chrome" class="color chrome">
                       <section>
                         <div class="chair angle1"></div>
@@ -237,18 +237,38 @@
                       </div>
                     </div>
                   </div>
-                  <div class="content" id="panel2">
-                    <div id="chrome" class="pattern chrome">
+                  <div class="content animated" id="panel2">
+                    <div id="chrome2" class="pattern chrome">
                       <section>
                         <div class="chair"></div>
                       </section>
                     </div>
-                    <div id="black" class="pattern black">
+                    <div id="black2" class="pattern black">
                       <section>
                         <div class="chair"></div>
                       </section>
                     </div>
-                    <div id="pattern1" class="pattern purple show">
+                    <div id="pattern1" class="pattern pattern1 show">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="pattern2" class="pattern pattern2">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="pattern3" class="pattern pattern3">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="pattern4" class="pattern pattern4">
+                      <section>
+                        <div class="chair"></div>
+                      </section>
+                    </div>
+                    <div id="pattern5" class="pattern pattern5">
                       <section>
                         <div class="chair"></div>
                       </section>
@@ -270,23 +290,26 @@
                       </div>
                     </div>
                   </div>
-                  <div class="content" id="panel3">
-                    <div id="range1" class="range headrest show">
+                  <div class="content animated" id="panel3">
+                    <div id="range1" class="range range1 show">
                       <section>
                         <div class="chair"></div>
                       </section>
+                      <h1>headrest</h1>
                     </div>
-                    <div id="range2" class="range stool">
+                    <div id="range2" class="range range2">
                       <section>
                         <div class="chair"></div>
                       </section>
+                      <h1>stool</h1>
                     </div>
-                    <div id="range3" class="range hanger">
+                    <div id="range3" class="range range3">
                       <section>
                         <div class="chair"></div>
                       </section>
+                      <h1>headrest</h1>
                     </div>
-                    <div id="shadow" class="shadow"></div>
+                    <!-- <div id="shadow" class="shadow"></div> -->
                     <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
                     <button type="button" data-direction="next" class="icon-arrow-forward arrow"></button>
                   </div>
@@ -358,6 +381,32 @@
       swiper.detachEvents();
     }
   }, 0);
+
+  // $('#chair .tab')
+  //   .mobile('tab', {
+  //     active_class: 'fade-in'
+  //   })
+  //   .on('toggled.tab', function(e) {
+  //     $('.range h1').each(function() {
+  //       $(this).css('left', (window.innerWidth - $(this).width()) / 2);
+  //     });
+  //   });
+  $('#chair .tab li a').on('click', function(e) {
+    e.preventDefault();
+    $('.range h1').each(function() {
+      $(this).css('left', (window.innerWidth - $(this).width()) / 2);
+    });
+    $(this).parent().addClass('active').siblings('.active').removeClass('active');
+    $(this.getAttribute('href'))
+      .css('z-index', 2)
+      .addClass('fade-in')
+      .on('animationend', function() {
+        $(this).siblings('.fade-in').removeClass('fade-in').off('animationend');
+      })
+      .siblings('.fade-in').css('z-index', '');
+        // .removeClass('fast')
+        // .addClass('fade-out')
+  });
 
   var swiper = new Swiper('#fullpage', {
     direction: 'vertical',

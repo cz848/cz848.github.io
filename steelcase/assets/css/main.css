@@ -1,8 +1,6 @@
 /* Base Chair Container */
 .chair-swiper {
-    position: relative;
-    height: 533px;
-    width: 100%;
+    height: calc(100vh - 70px);
     overflow: hidden;
     padding: 30px;
 }
@@ -47,11 +45,17 @@
 }
 
 .tab-content .content {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 1;
 }
 
-.tab-content .active {
-    display: block;
+.tab-content .fade-in {
+    visibility: visible;
 }
 
 /* Base Color Properties */
@@ -75,7 +79,6 @@
 .pattern section,
 .range section {
     position: absolute;
-    top: 120px;
     left: 93px;
     width: 189px;
 }
@@ -86,19 +89,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 189px;
-    height: 277.632922px;
+    width: 100%;
     background-repeat: no-repeat;
-    background-size: 800% 100%;
-    opacity: 0;
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
-}
-
-.color .chair.show,
-.pattern .chair.show,
-.range .chair.show {
-    opacity: 1;
 }
 
 .color.show,
@@ -108,10 +100,121 @@
     width: 100%;
 }
 
-.headrest,
-.stool,
-.hanger {
+.color section {
+    top: 120px;
+}
+
+.color .chair {
+    height: 277.632922px;
+    background-size: 800% 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+}
+
+.color .chair.show {
+    opacity: 1;
+}
+
+.pattern section {
+    top: 140px;
+}
+
+.pattern .chair {
+    height: 277.53304px;
+    background: url(../img/chair/pattern.png) no-repeat;
+    background-size: 500% 100%;
+}
+
+.pattern1 {
+    background: url(../img/pattern1.png);
+    background-size: 11px 18px;
+}
+
+.pattern1 .chair {
+    background-position: 0px 0;
+}
+
+.pattern2 {
+    background: url(../img/pattern2.png);
+    background-size: 11px 18px;
+}
+
+.pattern2 .chair {
+    background-position: -189px 0;
+}
+
+.pattern3 {
+    background: url(../img/pattern3.png);
+    background-size: 11px 18px;
+}
+
+.pattern3 .chair {
+    background-position: -378px 0;
+}
+
+.pattern4 {
+    background: url(../img/pattern4.png);
+    background-size: 11px 18px;
+}
+
+.pattern4 .chair {
+    background-position: -567px 0;
+}
+
+.pattern5 {
+    background: url(../img/pattern5.png);
+    background-size: 11px 18px;
+}
+
+.pattern5 .chair {
+    background-position: -756px 0;
+}
+
+.range {
     background-color: #45474B;
+}
+
+.range section {
+    top: 120px;
+    left: 25.5px;
+    width: 255px;
+}
+
+.range .chair {
+    width: 100%;
+    height: 320px;
+    background: url(../img/chair/range.png) no-repeat;
+    background-size: 300% 100%;
+}
+
+.range h1 {
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.range1 .chair {
+    background-position: 0px 0;
+}
+
+.range2 .chair {
+    background-position: -255px 0;
+}
+
+.range3 .chair {
+    background-position: -510px 0;
+}
+
+.range4 .chair {
+    background-position: -765px 0;
+}
+
+.range5 .chair {
+    background-position: -1020px 0;
 }
 
 /* Color Definitions */
@@ -533,7 +636,7 @@
 
 .video .cover {
     position: relative;
-    height: 533px;
+    height: calc(100vh - 70px);
     background: url(../img/video.png) 50% 100% no-repeat;
     background-size: 100%;
     color: white;
@@ -594,6 +697,17 @@
     letter-spacing: -0.5px;
 }
 
+.dimensions .chair {
+    position: absolute;
+    top: 167px;
+    right: 0;
+}
+
+.dimensions .chair img {
+    width: 242px;
+    height: 374px;
+}
+
 .description {
     margin-top: 54px;
     width: 102px;
@@ -601,25 +715,14 @@
     line-height: 20px;
 }
 
-.description p {
-    margin-bottom: 0;
-}
-
-.param2,
-.param3,
-.param4 {
+.description .param2,
+.description .param3,
+.description .param4 {
     margin-top: 35px;
 }
 
-.chair {
-    position: absolute;
-    top: 167px;
-    right: 0;
-}
-
-.chair img {
-    width: 242px;
-    height: 374px;
+.description p {
+    margin-bottom: 0;
 }
 
 .tile {
