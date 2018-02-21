@@ -33,7 +33,7 @@
       <p>请填写以下信息，
       <br>以便我们提供更好的服务。</p>
     </div>
-    <form action="" class="form" data-validator>
+    <form action="splash.html" class="form" data-validator>
       <div class="form-row">
         <label class="grid-1">您的姓名<input type="text" name="" id="" required></label>
         <span class="error"></span>
@@ -53,8 +53,8 @@
       <div class="form-row">
         <label class="grid-1" for="">手机号码
           <div class="row">
-            <select name="" id="area" class="grid-5"><option value="">香港 (+852)</option><option value="">中国 (+86)</option></select>
-            <input type="tel" name="" id="mobile" class="grid-7 columns" required>
+            <select name="area" id="area" class="grid-5"><option value="hk">香港 (+852)</option><option value="cn">中国 (+86)</option></select>
+            <input type="tel" pattern="mobilehk" name="" id="mobile" class="grid-7 columns" required>
           </div>
         </label>
         <span class="error"></span>
@@ -69,6 +69,9 @@
   <script src="assets/js/mobile.js"></script>
   <script>
     $(document).mobile();
+    $('#area').change(function() {
+      $('#mobile').attr('pattern', 'mobile' + this.value);
+    });
   </script>
 </body>
 

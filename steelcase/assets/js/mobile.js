@@ -3631,30 +3631,31 @@
             // smaller time will result in faster validation
             timeout: 1000,
             patterns: {
-                alpha: /^[a-zA-Z]*$/,
-                digital: /^\d*$/,
-                alpha_digital: /^[a-zA-Z\d]*$/,
-                words: /^\w*$/,
-                int: /^[-+]?\d*$/,
-                positive: /^\+?\d*(?:[\.]\d+)?$/,
-                negative: /^-\d*(?:[\.]\d+)?$/,
-                number: /^[-+]?\d*(?:[\.]\d+)?$/,
-                mobile: /^0?(?:1(?:[38]\d)|(?:4[579])|(?:[57][0-35-9]))\d{8}$/,
-                tel: /^(0\d{2,3}-?)?[2-9]\d{5,7}(-\d{1,5})?$/,
-                zip: /^\d{6}$/,
+                // alpha: /^[a-zA-Z]*$/,
+                // digital: /^\d*$/,
+                // alpha_digital: /^[a-zA-Z\d]*$/,
+                // words: /^\w*$/,
+                // int: /^[-+]?\d*$/,
+                // positive: /^\+?\d*(?:[\.]\d+)?$/,
+                // negative: /^-\d*(?:[\.]\d+)?$/,
+                // number: /^[-+]?\d*(?:[\.]\d+)?$/,
+                mobilecn: /^1[3-9]\d{9}$/,
+                mobilehk: /^[69]\d{7}$/,
+                // tel: /^(0\d{2,3}-?)?[2-9]\d{5,7}(-\d{1,5})?$/,
+                // zip: /^\d{6}$/,
                 // http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#valid-e-mail-address
                 email: /^[\w.!#$%&'*+\/=?^`{|}~-]+@[a-zA-Z\d](?:[a-zA-Z\d-]{0,61}[a-zA-Z\d])?(?:\.[a-zA-Z\d](?:[a-zA-Z\d-]{0,61}[a-zA-Z\d])?)*$/,
                 // http://blogs.lse.ac.uk/lti/2008/04/23/a-regular-expression-to-match-any-url/
-                url: /^(?:(https?|ftp|file|ssh):\/\/([-;:&=\+\$,\w]+@{1})?([-A-Za-z\d\.]+)+:?(\d+)?((\/[-\+~%\/\.\w]+)?\??([-\+=&;%@\.\w]+)?#?([\w]+)?)?)?$/,
-                // abc.de
-                domain: /^([a-zA-Z\d]([a-zA-Z\d\-]{0,61}[a-zA-Z\d])?\.)+[a-zA-Z]{2,8}$/,
-                datetime: /^([0-2]\d{3})\-([0-1]\d)\-([0-3]\d)\s([0-2]\d):([0-5]\d):([0-5]\d)([-+]([0-1]\d)\:00)?$/,
-                // YYYY-MM-DD
-                date: /(?:19|20)\d{2}[-/.](?:(?:0?[1-9]|1[0-2])[-/.](?:0?[1-9]|1\d|2\d)|(?:(?!02)(?:0?[1-9]|1[0-2])[-/.](?:30))|(?:(?:0?[13578]|1[02])[-/.]31))$/,
-                // HH:MM:SS
-                time: /^(0?\d|1\d|2[0-3])(:[0-5]\d){2}$/,
-                // #FFF or #FFFFFF
-                color: /^#([a-fA-F\d]{6}|[a-fA-F\d]{3})$/
+                // url: /^(?:(https?|ftp|file|ssh):\/\/([-;:&=\+\$,\w]+@{1})?([-A-Za-z\d\.]+)+:?(\d+)?((\/[-\+~%\/\.\w]+)?\??([-\+=&;%@\.\w]+)?#?([\w]+)?)?)?$/,
+                // // abc.de
+                // domain: /^([a-zA-Z\d]([a-zA-Z\d\-]{0,61}[a-zA-Z\d])?\.)+[a-zA-Z]{2,8}$/,
+                // datetime: /^([0-2]\d{3})\-([0-1]\d)\-([0-3]\d)\s([0-2]\d):([0-5]\d):([0-5]\d)([-+]([0-1]\d)\:00)?$/,
+                // // YYYY-MM-DD
+                // date: /(?:19|20)\d{2}[-/.](?:(?:0?[1-9]|1[0-2])[-/.](?:0?[1-9]|1\d|2\d)|(?:(?!02)(?:0?[1-9]|1[0-2])[-/.](?:30))|(?:(?:0?[13578]|1[02])[-/.]31))$/,
+                // // HH:MM:SS
+                // time: /^(0?\d|1\d|2[0-3])(:[0-5]\d){2}$/,
+                // // #FFF or #FFFFFF
+                // color: /^#([a-fA-F\d]{6}|[a-fA-F\d]{3})$/
             },
             verifiers: {
                 requiredone: function(el, required, parent) {
