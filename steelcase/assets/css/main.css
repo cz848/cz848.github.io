@@ -952,12 +952,13 @@
 
 .well h1 {
     font-size: 24px;
-    margin-bottom: 16px;
+    line-height: 32px;
+    margin-bottom: 20px;
 }
 
 .well p {
-    line-height: 24px;
     font-size: 18px;
+    line-height: 24px;
     margin-bottom: 0;
 }
 
@@ -1000,7 +1001,7 @@
 }
 
 .splash header {
-    background: url(../img/splash-bg.png) 0 0 no-repeat;
+    background: url(../img/splash-bg@2x.jpg) 0 0 no-repeat;
     height: 214px;
     text-align: center;
     line-height: 214px;
@@ -1009,4 +1010,89 @@
 
 .splash header i {
     font-size: 120px;
+}
+
+/* What we do */
+.about {
+    padding: 30px 40px 0 30px;
+}
+
+.about h1 {
+    font-size: 32px;
+    line-height: 46px;
+    margin-bottom: 8px;
+}
+
+.about p {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.graph1 {
+    padding: 20px 30px 27px;
+}
+
+.graph1 p {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 64px 40px 0;
+}
+
+.graph1 h2 {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.photo {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.graph2 {
+    padding: 46px 55px 0 30px;
+    background: #8DC1DB url(../img/lennardkok.png) 100% 100% no-repeat;
+    color: white;
+}
+
+.graph2 h2 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 43px;
+}
+
+.graph2 h3 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-right: 68px;
+    margin-bottom: 42px;
+}
+
+.graph2 p {
+    width: 164px;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 120px;
+    margin-bottom: 0;
+}
+
+.graph3 {
+    padding: 60px 0 40px;
+    background: #7B7F71;
+    background-size: contain;
+    color: white;
+}
+
+.graph3 h2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin: -100px 108px 15px 30px;
+}
+
+.graph3 .logo {
+    margin: 30px 30px 0;
+    padding-top: 23px;
+    border-top: 1px solid #D8D8D8;
+}
+
+.graph3 .logo img {
+    width: 119px;
 }
