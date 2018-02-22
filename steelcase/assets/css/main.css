@@ -158,6 +158,14 @@
     width: 190px;
 }
 
+@media (max-width: 360px) and (-webkit-min-device-pixel-ratio: 3), (max-width: 360px) and (min-resolution: 3dppx) {
+    .color section,
+    .pattern section,
+    .range section {
+        left: 85px;
+    }
+}
+
 .color .chair,
 .pattern .chair,
 .range .chair {
@@ -850,7 +858,7 @@
 
 /* Get in touch */
 .well {
-    padding: 30px 30px 60px;
+    padding: 30px 30px 40px;
     color: #111111;
 }
 
