@@ -78,7 +78,7 @@
         // ipAddress: ,
         pageUrl: location.href,
         pageName: document.title,
-        redirectUrl: location.path + 'splash.html',
+        redirectUrl: location.origin + location.pathname.replace(/\/[\w-]+\.html/, '/splash.html'),
       }));
       $('input[name=hs_context]').val(hs_context);
     });
