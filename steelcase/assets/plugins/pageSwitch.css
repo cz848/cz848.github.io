@@ -5,7 +5,7 @@
     overflow: hidden;
 }
 
-.slide-container > .swiper-slide > img {
+.slide-container > .swiper-wrapper > .swiper-slide > img {
     max-width: none;
     height: 100%;
     position: relative;
