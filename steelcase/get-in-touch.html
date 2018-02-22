@@ -27,44 +27,60 @@
       <p>请填写以下信息，
       <br>以便我们提供更好的服务。</p>
     </div>
-    <form action="splash.html" class="form" data-validator>
+    <form action="https://forms.hubspot.com/uploads/form/v2/1822507/02b027b2-4de5-4d52-8755-4ef334faeb9c" method="post" class="form" data-validator="ajax">
       <div class="form-row">
-        <label class="grid-1">您的姓名<input type="text" name="" id="" required></label>
+        <label class="grid-1">您的姓名<input type="text" name="firstname" id="" required></label>
         <span class="error"></span>
       </div>
       <div class="form-row">
-        <label class="grid-1">职业<input type="text" name="" id="" required></label>
+        <label class="grid-1">职业<input type="text" name="jobtitle" id="" required></label>
         <span class="error"></span>
       </div>
       <div class="form-row">
-        <label class="grid-1">公司名称<input type="text" name="" id="" required></label>
+        <label class="grid-1">公司名称<input type="text" name="company" id="" required></label>
         <span class="error"></span>
       </div>
       <div class="form-row">
-        <label class="grid-1">电子邮箱<input type="email" name="" id="" required></label>
+        <label class="grid-1">电子邮箱<input type="email" name="email" id="" required></label>
         <span class="error"></span>
       </div>
       <div class="form-row">
         <label class="grid-1" for="">手机号码
           <div class="row">
-            <select name="area" id="area" class="grid-5"><option value="hk">香港 (+852)</option><option value="cn">中国 (+86)</option></select>
-            <input type="tel" pattern="mobilehk" name="" id="mobile" class="grid-7 columns" required>
+            <select name="country_code" id="country_code" class="grid-5"><option value="Hong Kong (+852)">香港 (+852)</option><option value="China (+86)">中国 (+86)</option></select>
+            <input type="tel" pattern="mobilehk" name="phone" id="mobile" class="grid-7 columns" required>
           </div>
         </label>
         <span class="error"></span>
       </div>
       <div class="form-row">
-        <label class="grid-1">问题反馈（选填）<textarea name="" id="" cols="30" rows="10"></textarea></label>
+        <label class="grid-1">问题反馈（选填）<textarea name="message" id="" cols="30" rows="10"></textarea></label>
       </div>
-      <div class="form-actions"><button class="btn primary expand large">确认提交<i class="icon-arrow-right"></i></button></div>
+      <input type="hidden" name="hs_context">
+      <div class="form-actions"><button type="submit" class="btn primary expand large">确认提交<i class="icon-arrow-right"></i></button></div>
     </form>
   </div>
+  <!-- Start of HubSpot Embed Code -->
+  <script id="hs-script-loader" async defer src="//js.hs-scripts.com/1822507.js"></script>
+  <!-- End of HubSpot Embed Code -->
   <script src="assets/js/libs.js"></script>
   <script src="assets/js/mobile.js"></script>
   <script>
     $(document).mobile();
-    $('#area').change(function() {
-      $('#mobile').attr('pattern', 'mobile' + this.value);
+    var code = ['hk', 'cn'];
+    $('#country_code').change(function() {
+      $('#mobile').attr('pattern', 'mobile' + code[this.selectedIndex]);
+    });
+
+    $('form').on('valid.validator', function(e) {
+      var hs_context = encodeURIComponent(JSON.stringify({
+        hutk: $.cookie('hubspotutk'),
+        // ipAddress: ,
+        pageUrl: location.href,
+        pageName: document.title,
+        redirectUrl: location.path + 'splash.html',
+      }));
+      $('input[name=hs_context]').val(hs_context);
     });
   </script>
 </body>
