@@ -220,18 +220,18 @@ $(document).mobile();
   // var startY = 0;
   // var currentY = 0;
 
-  swiper.lockSwipes();
-  // swiper.slides.eq(0)
+  swiper.slides.eq(0)
   //   .on('touchstart', function(e) {
   //     startY = currentY = e.originalEvent.targetTouches[0].pageY;
   //   })
-  //   .on('touchmove', function(e) {
+    .on('touchmove', function(e) {
+      swiper.lockSwipes();
   //     currentY = e.originalEvent.targetTouches[0].pageY;
 
   //     if (startY != currentY) {
   //       return false;
   //     }
-  //   });
+    });
 
   // slide to first ads screen?
   swiper
