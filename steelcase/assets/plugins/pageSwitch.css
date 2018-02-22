@@ -104,3 +104,9 @@
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.05);
     transition: background 600ms ease;
 }
+
+@media (max-width: 360px) and (-webkit-min-device-pixel-ratio: 3), (max-width: 360px) and (min-resolution: 3dppx) {
+    .slide-container .slide-nav a::before {
+        line-height: 40px;
+    }
+}
