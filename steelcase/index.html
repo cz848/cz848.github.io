@@ -25,15 +25,10 @@
 
 <body class="continue">
   <div class="loading"><img src="assets/img/spinner.svg" alt=""></div>
-  <ul id="nav" class="bar-tabs nav">
-    <li class="controller"><a href="javascript:void(0);" class="swiper-btn-next">Steelcase<br> Series 1</a></li>
-    <li class="controller"><a href="get-in-touch.html">联络我们</a></li>
-    <li class="controller"><a href="what-we-do.html">关于我们</a></li>
-  </ul>
   <main id="fullpage" class="swiper-container">
     <div class="swiper-wrapper">
       <!-- One -->
-      <div class="swiper-slide">
+      <div class="swiper-slide firstscreen">
         <div id="slider" class="slide-container">
           <div class="swiper-wrapper">
             <!-- One -->
@@ -81,8 +76,13 @@
             <a rel="next" class="icon-arrow-forward swiper-next"></a>
           </div>
         </div>
-        <div class="placeholder"></div>
+        <!-- <div class="placeholder"></div> -->
       </div>
+      <ul id="nav" class="bar-tabs nav sticky">
+        <li class="controller"><a href="javascript:void(0);" class="swiper-btn-next">Steelcase<br> Series 1</a></li>
+        <li class="controller"><a href="get-in-touch.html">联络我们</a></li>
+        <li class="controller"><a href="what-we-do.html">关于我们</a></li>
+      </ul>
       <!-- Two -->
       <div data-hash="next" class="swiper-slide">
         <div class="placeholder"></div>
@@ -202,7 +202,7 @@
                       </section>
                     </div>
                     <div id="shadow" class="shadow"></div>
-                    <button type="button" data-direction="prev" class="icon-arrow-back arrow"></button>
+                    <button type="button" data-direction="prev" class="icon-arrow-back arrow" disabled></button>
                     <button type="button" data-direction="next" class="icon-arrow-forward arrow"></button>
                     <input id="angleSlider" hidden type="range" min="1" max="8" step="1" value="4">
                     <label for="angleSlider" id="controls" class="controls purple">
