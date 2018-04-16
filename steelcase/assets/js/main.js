@@ -546,7 +546,7 @@
       self.css('visibility', 'hidden');
     });
     // $('#nav').css('z-index', 0);
-    $('video').show();
+    $('video').show()
       // .css({
       //   'transform': 'rotate(90deg)',
       //   top: (window.innerWidth * 1.777778 - window.innerHeight),
