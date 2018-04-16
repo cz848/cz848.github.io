@@ -540,14 +540,13 @@
   // .on('touchend', function(e) {
   // });
 
-  $('video').hide();
   $('.cover').click(function() {
     var self = $(this);
     self.animate({opacity: 0}, 200, function() {
       self.css('visibility', 'hidden');
     });
     // $('#nav').css('z-index', 0);
-    $('video').show()
+    $('video').show();
       // .css({
       //   'transform': 'rotate(90deg)',
       //   top: (window.innerWidth * 1.777778 - window.innerHeight),
@@ -555,7 +554,7 @@
       // })
       .on('ended', function () {
         // $('#nav').css('z-index', '');
-        $(this).hide()
+        $(this).hide();
           // .css({
           //   'position': '',
           //   'z-index': '',
