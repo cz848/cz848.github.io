@@ -542,12 +542,17 @@
 
   $('video').hide();
   $('.cover').click(function() {
-    $(this).animate({opacity: 0}, 200);
+    var self = $(this);
+    self.animate({opacity: 0}, 200, function() {
+      self.css('visibility', 'hidden');
+    });
     $('video')
       .show()
       .on('ended', function () {
         $(this).hide();
-        $('.cover').fadeIn(200);
+        $('.cover')
+          .css('visibility', '')
+          .animate({opacity: 1}, 200);
       })[0].play();
   });
 })(window, document);
