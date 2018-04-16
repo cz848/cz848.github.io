@@ -546,20 +546,20 @@
     self.animate({opacity: 0}, 200, function() {
       self.css('visibility', 'hidden');
     });
-    $('#nav').css('z-index', 0);
+    // $('#nav').css('z-index', 0);
     $('video').show()
-      .css({
-        'transform': 'rotate(90deg)',
-        height: window.innerWidth,
-        'z-index': 1000,
-      })
+      // .css({
+      //   'transform': 'rotate(90deg)',
+      //   height: window.innerWidth,
+      //   'z-index': 1000,
+      // })
       .on('ended', function () {
-        $('#nav').css('z-index', '');
+        // $('#nav').css('z-index', '');
         $(this).hide()
-          .css({
-            'position': '',
-            'z-index': '',
-          })
+          // .css({
+          //   'position': '',
+          //   'z-index': '',
+          // })
         $('.cover')
           .css('visibility', '')
           .animate({opacity: 1}, 200);
