@@ -546,10 +546,17 @@
     self.animate({opacity: 0}, 200, function() {
       self.css('visibility', 'hidden');
     });
-    $('video')
-      .show()
+    $('video').show()
+      .css({
+        'position': 'fixed',
+        'z-index': 1000,
+      })
       .on('ended', function () {
-        $(this).hide();
+        $(this).hide()
+          .css({
+            'position': '',
+            'z-index': '',
+          })
         $('.cover')
           .css('visibility', '')
           .animate({opacity: 1}, 200);
