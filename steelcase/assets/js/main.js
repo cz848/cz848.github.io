@@ -546,12 +546,15 @@
     self.animate({opacity: 0}, 200, function() {
       self.css('visibility', 'hidden');
     });
+    $('#nav').css('z-index', 0);
     $('video').show()
       .css({
-        'position': 'fixed',
+        'transform': 'rotate(90deg)',
+        height: window.innerWidth,
         'z-index': 1000,
       })
       .on('ended', function () {
+        $('#nav').css('z-index', '');
         $(this).hide()
           .css({
             'position': '',
