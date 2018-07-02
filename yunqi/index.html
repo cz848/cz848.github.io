@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="author" content="Tyler Chao">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <title>开源改变世界</title>
+  <link rel="stylesheet" href="css/css.css">
+<style>
+body {
+  background-color: #EEEEEE;
+  font-size: 12px;
+}
+i {
+  font-style: normal;
+}
+img {
+  max-width: 100%;
+}
+.visitors p {
+  margin-bottom: 0px;
+}
+.slide .swiper-slide {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.slide .slide1 {
+  background-image: url(images/sl1.jpg);
+}
+.slide .slide2 {
+  background-image: url(images/sl2.jpg);
+}
+.mod {
+  margin-top: 10px;
+  background-color: #FFFFFF;
+}
+.av-list p{
+  padding: 10px 15px;
+  font-size: 12px;
+  color: #999999;
+}
+.av-list p i {
+  color: #E62739;
+}
+.av-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 13px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.av-list li {
+  width: 40px;
+  height: 40px;
+  margin: 5px 2px;
+  text-align: center;
+}
+
+.av-list li img {
+  width: 100%;
+  height: 100%;
+}
+
+.av-list .more img {
+  width: 28px;
+}
+.mod-title {
+  height: 40px;
+  padding: 0 15px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+.mod-title p {
+  float: left;
+  position: relative;
+  font-size: 14px;
+}
+.mod-title p span {
+  display: block;
+  line-height: 38px;
+  border-bottom: 2px solid #FD7933;
+}
+.mod-title .icon {
+  float: right;
+  color: #999;
+  line-height: 40px;
+  padding-left: 18px;
+}
+.mod-title .zan0 {
+  background: url(images/zan0.svg) no-repeat 0 center;
+}
+.mod-body {
+  margin: 10px 15px;
+}
+.mod-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 -15px 0 0;
+}
+.mod-body li {
+  position: relative;
+}
+.mod-body li::after {
+  position: absolute;
+  bottom: 0;
+
+}
+</style>
+</head>
+<body>
+  <section class="visitors">
+    <div class="swiper-container slide">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1"></div>
+        <div class="swiper-slide slide2"></div>
+      </div>
+      <!-- 分页器 -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <div id="bnr" class="mod banner">
+      <img src="images/banner.jpg" alt="">
+    </div>
+    <div class="mod av-list">
+      <p>已有<i>33.2万人</i>观看</p>
+      <ul class="">
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li><img src="images/av.png" alt=""></li>
+        <li class="more"><a href=""><img src="images/more.svg" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="mod comments">
+      <div class="mod-title">
+        <p><span>评论 9.2万</span></p>
+        <i class="icon zan0">4.5万</i>
+      </div>
+      <div class="mod-body">
+        <ul class="">
+          <li>
+            <div class="av"><img src="images/av.png" alt=""></div>
+            <div class="body">
+              <div class="nick">中邪大魔王</div>
+              <i class="icon zan">256</i>
+              <p class="cont">听到猛男的炒饭，是不是觉得很有趣？看到它的logo😊弘二头肌发达的肌肉男，第一眼会觉得这是一家健身房吧。</p>
+              <div class="time">7-01 12:00</div>
+            </div>
+          </li>
+        </ul>
+        <div class="handle"><a href="" class="page">查看更多</a></div>
+      </div>
+    </div>
+    <div class="actions"><button class="btn"><i class="icon chat"></i>我要评论</button></div>
+  </section>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    effect: 'slide',
+    slidesPerView: 'auto',
+    initialSlide: 0,
+    loop: false,
+    // 分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script>
+</body>
+</html>
